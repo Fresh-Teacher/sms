@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Add new staff</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured School managemnt system for Schools" name="description" />
+    <meta content="Mpabaisi Technologies" name="Developer name" />
+    <meta content="ashley7520charles@gmail.com" name="Developer email" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="https://demo.lesson.co.ug/assets/images/peas_logo.png">
+
+    <link href="https://demo.lesson.co.ug/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://demo.lesson.co.ug/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/0be66f9bc5.js" crossorigin="anonymous"></script>
+    <link href="https://demo.lesson.co.ug/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://demo.lesson.co.ug/css/style.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        a {
+            text-transform: uppercase;
+        }
+
+        button {
+            text-transform: uppercase;
+        }
+
+        .content-page {
+            margin-left: auto;
+        }
+
+        .nav-link {
+            color: #FFFFFF;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #0f7747;">
+            <a class="navbar-brand text-center" href="#">
+            <img src="https://demo.lesson.co.ug/assets/images/peas_logo.png " alt="" height="40"
+                 style="background-color: #FFFFFF; padding: 5px; border-radius: 5px;">
+        </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #FFFFFF;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/home" style="color: #FFFFFF;">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FFFFFF;">
+                            Staff
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a href="https://demo.lesson.co.ug/staff/create" class="dropdown-item">
+                                    <span>Add new Staff</span>
+                                </a>
+
+                            <a href="/import_staff_form" class="dropdown-item">
+                                    <span>Import Staff data</span>
+                                </a>
+
+                            <a href="https://demo.lesson.co.ug/staff" class="dropdown-item">
+                                    <span>View Staff</span>
+                                </a>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FFFFFF;">
+                            Students</a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a href="https://demo.lesson.co.ug/student/create" class="dropdown-item">
+                                    <span>Add new Student</span>
+                                </a>
+
+                            <a href="/import_student_data" class="dropdown-item">
+                                    <span>Import students data</span>
+                                </a>
+
+
+                            <a href="https://demo.lesson.co.ug/student" class="dropdown-item">
+                                    <span>View students per class</span>
+                            </a>
+
+                            <a href="/student_ists/All" class="dropdown-item">
+                                <span>View all students in whole school</span>
+                            </a>
+
+                            <a href="https://demo.lesson.co.ug/stream_students" class="dropdown-item">
+                                <span>Stream student count</span>
+                            </a>
+
+
+
+
+                            <hr>
+
+                            <a href="https://demo.lesson.co.ug/requirements" class="dropdown-item">
+                                <span>School requirements</span>
+                            </a>
+
+                            <a href="https://demo.lesson.co.ug/student_requirements/create" class="dropdown-item">
+                                <span>Student requirement records</span>
+                            </a>
+
+                        </div>
+                    </li>
+
+
+
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FFFFFF;">
+                            Attendance
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                            <a href="https://demo.lesson.co.ug/student_attendance/create" class="dropdown-item">
+                                    <span>Record Student daily Attendance</span>
+                                </a>
+                            <a href="/weekly_attendance" class="dropdown-item">Record Student weekly Attendance</a>
+                            <div class="dropdown-divider"></div>
+
+
+                            <a href="https://demo.lesson.co.ug/student_attendance" class="dropdown-item">
+                                    <span>Daily Class report</span>
+                                </a>
+
+                            <a href="/periodic_attendance_form" class="dropdown-item">
+                                    <span>Periodic Class report</span>
+                                </a>
+
+                            <a href="/load_attendance_report_form" class="dropdown-item">Student Overall report</a>
+
+                            <div class="dropdown-divider"></div>
+
+
+
+                            <a href="https://demo.lesson.co.ug/staff_attendance/create" class="dropdown-item">
+                                    <span>Record Staff Attendance</span>
+                                </a>
+
+                            <a href="https://demo.lesson.co.ug/staff_attendance" class="dropdown-item">
+                                    <span>Staff Daily Attendance report</span>
+                                </a>
+
+                            <a href="/periodic_report_form" class="dropdown-item">
+                                    <span>Staff Periodic Attendance report</span>
+                                </a>
+
+                            <a href="/staff_overall_report_form" class="dropdown-item">
+                                    <span>Staff Overall report</span>
+                                </a>
+
+
+                        </div>
+                    </li>
+
+
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FFFFFF;">
+                            Behaviour
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+
+                            <a href="https://demo.lesson.co.ug/student" class="dropdown-item">
+                                    <span>Record Student Behaviour</span>
+                                </a>
+
+                            <a href="https://demo.lesson.co.ug/staff" class="dropdown-item">
+                                    <span>Record Staff Behaviour</span>
+                                </a>
+                            <div class="dropdown-divider"></div>
+
+                            <a href="https://demo.lesson.co.ug/behaviour_category/create" class="dropdown-item">
+                                    <span>Create Categories</span>
+                                </a>
+
+                            <a href="https://demo.lesson.co.ug/behaviour_category" class="dropdown-item">
+                                    <span>View Categories</span>
+                                </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="https://demo.lesson.co.ug/requisitions" style="color: #FFFFFF;">
+                            Requisitions</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="https://demo.lesson.co.ug/uniform/create" style="color: #FFFFFF;">
+                            Uniform</a>
+                    </li>
+
+
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FFFFFF;">
+                            Store
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                            <a href="https://demo.lesson.co.ug/store_items" class="dropdown-item">Store Items</a>
+                            <a href="https://demo.lesson.co.ug/stock" class="dropdown-item">Stock entries</a>
+
+                            <a href="https://demo.lesson.co.ug/stock_issues" class="dropdown-item">Issue stock</a>
+
+                        </div>
+                    </li>
+
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FFFFFF;">
+                            Library</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                            <a href="https://demo.lesson.co.ug/books" class="dropdown-item">
+                                <span>Books</span>
+                            </a>
+
+                            <a href="https://demo.lesson.co.ug/student_books" class="dropdown-item">
+                                <span>Issue books</span>
+                            </a>
+
+                        </div>
+                    </li>
+
+
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FFFFFF;">
+                            Academics
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="overflow: auto; height: 400px">
+
+                            <a href="https://demo.lesson.co.ug/staff_subject_paper" class="dropdown-item">
+                                    <span>Record marks (Primary)</span>
+                                </a>
+
+                            <a href="https://demo.lesson.co.ug/staff_subject_paper" class="dropdown-item">
+                                    <span>Record marks (O'Level)</span>
+                                </a>
+
+                            <a href="https://demo.lesson.co.ug/scores/create" class="dropdown-item">
+                                    <span>Record marks (O' Level) New</span>
+                                </a>
+
+                            <a href="https://demo.lesson.co.ug/activities" class="dropdown-item">
+                                    <span>Co-curricular (Student projects)</span>
+                                </a>
+
+                            <a href="https://demo.lesson.co.ug/advanced_level_marks" class="dropdown-item">
+                                    <span>Record marks (A' Level)</span>
+                                </a>
+
+                            <a href="https://demo.lesson.co.ug/subject_paper_mark/create" class="dropdown-item">
+                                <span>Generate Mark sheet</span>
+                            </a>
+
+                            <!-- <a href="https://demo.lesson.co.ug/target_mark/create" class="dropdown-item">Set Target marks</a> -->
+
+                            <!-- <a href="https://demo.lesson.co.ug/target_mark" class="dropdown-item">View Target score mark sheet</a> -->
+                            <div class="dropdown-divider"></div>
+                            <a href="https://demo.lesson.co.ug/primary_report/create" class="dropdown-item">
+                                    <span>Primary reports</span>
+                                </a>
+
+                            <a href="https://demo.lesson.co.ug/student_report/create" class="dropdown-item">
+                                    <span>O'Level reports(old)</span>
+                                </a>
+
+                            <a href="https://demo.lesson.co.ug/choose_class" class="dropdown-item">
+                                    <span>O'Level reports(new)</span>
+                                </a>
+
+                            <a href="https://demo.lesson.co.ug/student_report/create" class="dropdown-item">
+                                    <span>A'Level reports</span>
+                                </a>
+
+
+                            <div class="dropdown-divider"></div>
+
+                            <a href="https://demo.lesson.co.ug/class_subject/create" class="dropdown-item">
+                                <span>Add subjects to Class</span>
+                            </a>
+
+                            <a href="https://demo.lesson.co.ug/class_subject" class="dropdown-item">
+                                <span>View Class subject</span>
+                            </a>
+
+
+                            <a href="https://demo.lesson.co.ug/student_subject/create" class="dropdown-item">
+                                <span>Add Electives (Combinations) to students</span>
+                            </a>
+
+                            <a href="https://demo.lesson.co.ug/student_subject" class="dropdown-item">
+                                <span>View student electives</span>
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+
+                            <a href="https://demo.lesson.co.ug/exam_set/create" class="dropdown-item">
+                                <span>Create Exam sets</span>
+                            </a>
+
+                            <a href="https://demo.lesson.co.ug/exam_set" class="dropdown-item">
+                                <span>View Exam sets</span>
+                            </a>
+
+
+                            <div class="dropdown-divider"></div>
+
+                            <a href="https://demo.lesson.co.ug/school_grading/create" class="dropdown-item">
+                                <span>Create Grading</span>
+                            </a>
+
+                            <a href="https://demo.lesson.co.ug/competence_grading" class="dropdown-item">
+                                <span>New Carriculum Grading</span>
+                            </a>
+
+                            <a href="/replicate_grading" class="dropdown-item">
+                                <span>Replicate Grading</span>
+                            </a>
+
+                            <a href="https://demo.lesson.co.ug/school_grading" class="dropdown-item">
+                                <span>View Grading</span>
+                            </a>
+
+                            <a href="https://demo.lesson.co.ug/promote_student/create" class="dropdown-item">Promote students</a>
+
+                            <div class="dropdown-divider"></div>
+                            <a href="https://demo.lesson.co.ug/learning_materials" class="dropdown-item">Learning units</a>
+                            <a href="https://demo.lesson.co.ug/learning_material_streams" class="dropdown-item">Class learning
+                                units</a>
+                            <a href="https://demo.lesson.co.ug/learning_material_staff" class="dropdown-item">Staff learning
+                                units</a>
+                            <a href="https://demo.lesson.co.ug/nursery_marks/create" class="dropdown-item">Nursery marks</a>
+                            <a href="https://demo.lesson.co.ug/nursery_report/create" class="dropdown-item">Nursery Reports</a>
+                            <a href="https://demo.lesson.co.ug/nursery_grading" class="dropdown-item">Nursery gradding</a>
+
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FFFFFF;">
+                            Finance</a>
+
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="overflow: auto; height: 400px">
+
+                            <a href="https://demo.lesson.co.ug/finance_records" class="dropdown-item">
+                                <span>Uploaded financial records</span>
+                            </a>
+
+                            <a href="/load_fees_records" class="dropdown-item">
+                                <span>Record student Fees</span>
+                            </a>
+
+                            <hr>
+
+                            <a href="https://demo.lesson.co.ug/fees_records/create" class="dropdown-item">
+                                <span>View student Payments</span>
+                            </a>
+
+                            <a href="https://demo.lesson.co.ug/addititonal_payment/create" class="dropdown-item">
+                                <span>View student additional Payments</span>
+                            </a>
+
+                            <a href="/periodic_fees_collection_form" class="dropdown-item">
+                                <span>Periodic fees collection</span>
+                            </a>
+
+                            <a href="/overall_fees_collection" class="dropdown-item">
+                                <span>Overall fees collection</span>
+                            </a>
+
+
+
+                            <div class="dropdown-divider"></div>
+
+                            <a href="https://demo.lesson.co.ug/fees_structure" class="dropdown-item">
+                                <span>View Fees structure</span>
+                            </a>
+
+                            <a href="https://demo.lesson.co.ug/fees_structure/create" class="dropdown-item">
+                                <span>Create Fees structure</span>
+                            </a>
+
+
+
+                            <a href="https://demo.lesson.co.ug/student_fees_type" class="dropdown-item">
+                                <span>Assign Fees Type to Students</span>
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a href="https://demo.lesson.co.ug/fees_type" class="dropdown-item">
+                                <span>View Fees Types</span>
+                            </a>
+
+                            <a href="https://demo.lesson.co.ug/fees_type/create" class="dropdown-item">
+                                <span>Create Fees Types</span>
+                            </a>
+
+
+                            <!-- <div class="dropdown-divider"></div> -->
+
+                            <a href="https://demo.lesson.co.ug/fees_item" class="dropdown-item">
+                                <span>View Fees Items</span>
+                            </a>
+
+                            <a href="https://demo.lesson.co.ug/fees_item/create" class="dropdown-item">
+                                <span>Create Fees Items</span>
+                            </a>
+
+
+                            <div class="dropdown-divider"></div>
+
+                            <a href="https://demo.lesson.co.ug/expenses" class="dropdown-item">
+                                <span>Expenses records</span>
+                            </a>
+
+
+
+                            <a href="https://demo.lesson.co.ug/expense_category" class="dropdown-item">
+                                <span>Expenses categories</span>
+                            </a>
+
+
+
+                            <a href="https://demo.lesson.co.ug/vote_book" class="dropdown-item"><span>Vote book(budget)</span></a>
+
+
+
+                            <a href="https://demo.lesson.co.ug/expense_report" class="dropdown-item"><span>Generate expense report</span></a>
+
+
+                            <hr>
+                            <a class="dropdown-item" href="https://demo.lesson.co.ug/salary_payment">Staff Salary payments</a>
+                            <a class="dropdown-item" href="https://demo.lesson.co.ug/salary_payment/create">Salary payments
+                                records</a>
+
+                            <hr>
+                            <a href="https://demo.lesson.co.ug/purchases" class="dropdown-item"><span>Purchases</span></a>
+                            <a href="https://demo.lesson.co.ug/purchase_report" class="dropdown-item"><span>Purchase report</span> </a>
+
+                            <hr>
+                            <a href="https://demo.lesson.co.ug/finance_report" class="dropdown-item">Finance report</a>
+                            <hr>
+
+                            <a href="https://demo.lesson.co.ug/bank" class="dropdown-item">Supported Banks</a>
+                            <a href="https://demo.lesson.co.ug/bank_deposite" class="dropdown-item">Bank transactions</a>
+                            <a href="https://demo.lesson.co.ug/bankreport" class="dropdown-item">Bank report</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FFFFFF;">
+                            Reports
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a href="/reports_page" class="dropdown-item">
+                                <span>All reports</span>
+                            </a>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #FFFFFF;">
+                        Settings
+                    </a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                            <a href="/settings" class="dropdown-item">
+                                <span>School Set-up</span>
+                            </a>
+
+                            <a class="dropdown-item" href="https://demo.lesson.co.ug/houses"><span>Houses</span></a>
+
+                            <a href="https://demo.lesson.co.ug/user_list" class="dropdown-item">
+                            <span>Users permission</span>
+                        </a>
+
+                            <a href="https://demo.lesson.co.ug/user_roles" class="dropdown-item">
+                                <span>Users roles</span>
+                            </a>
+
+                            <a href="https://demo.lesson.co.ug/user_logs/create" class="dropdown-item">
+                                <span>User logs </span>
+                            </a>
+
+                        </div>
+                    </li>
+                </ul>
+
+
+                <ul class="list-unstyled topnav-menu float-right mb-0">
+
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false" style="color: #FFFFFF;">
+
+                            <span class="pro-user-name ml-1" style="font-size: 10px;">
+                                SCHOOL
+                                 (Term one, 2023)                            </span>
+                    </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+
+                            <a href="https://demo.lesson.co.ug/user/create" class="dropdown-item notify-item">
+                            <span>Change password</span>
+                        </a>
+
+                            <a href="https://demo.lesson.co.ug/user" class="dropdown-item notify-item">
+                            <span>Reset password</span>
+                        </a>
+
+                            <a href="https://demo.lesson.co.ug/logout" class="dropdown-item notify-item" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                Logout</a>
+
+                            <form id="logout-form" action="https://demo.lesson.co.ug/logout" method="POST" style="display: none;">
+                                <input type="hidden" name="_token" value="Dw4wj84ZnvMQtadhQ9FfqEswJKYwG7uq6WhP5usn"> </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="content-page">
+            <div class="content">
+
+                <div class="container-fluid">
+                    <span id="school_name_to" style="font-size: 15px; float: right;" class="text-success"></span>
+
+
+
+
+
+                    <div class="row col-12">
+                        <div class="col-xl-12">
+
+                            <div class="page-title-box">
+                                <h4 class="page-title">Add new Staff</h4>
+                            </div>
+
+
+                            <div class="card-box">
+                                <form method="POST" id="form" action="https://demo.lesson.co.ug/staff" enctype="multipart/form-data">
+                                    <input type="hidden" name="_token" value="Dw4wj84ZnvMQtadhQ9FfqEswJKYwG7uq6WhP5usn">
+                                    <div class="row col-md-12">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Surname *</label>
+                                                <input type="text" class="form-control" name="sname" value="">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label">First name *</label>
+                                                <input type="text" class="form-control" name="fname" value="">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label">Phone Number *</label>
+                                                <input type="text" class="form-control" name="phone_number" value="">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label">Gender</label>
+                                                <select class="form-control" name="gender">
+                                    <option></option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                                            </div>
+
+                                            <button type="submit" id="save_school" class="btn btn-info waves-effect waves-light">Save</button>
+
+                                        </div>
+
+                                        <div class="col-md-6">
+
+                                            <div class="form-group">
+                                                <label class="control-label">Staff type</label>
+                                                <select class="form-control" name="type">
+                                    <option></option>
+                                    <option value="Full Time">Full time</option>
+                                    <option value="Part Time">Part time</option>
+                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label">Staff Department</label>
+                                                <select class="form-control" name="staff_department" id="staff_department">
+                                    <option></option>
+                                    <option value="Teaching staff">Teaching staff</option>
+                                    <option value="Non teaching staff">Non teaching staff</option>
+                                </select>
+                                            </div>
+
+                                            <div class="form-group" id="level_of_education">
+                                                <label class="control-label">Level education</label>
+                                                <select class="form-control" name="qualifications">
+                                   <option></option>
+<option value="Primary school">Primary school</option>
+<option value="Lower Secondary">Lower Secondary</option>
+<option value="Upper Secondary">Upper Secondary</option>
+<option value="Certificate">Certificate</option>
+<option value="Diploma Arts">Diploma Arts</option>
+<option value="Diploma Science">Diploma Science</option>
+<option value="Degree Arts">Degree Arts</option>
+<option value="Degree Science">Degree Science</option>
+<option value="Masters">Masters</option>
+                                </select>
+                                            </div>
+
+                                            <div class="form-group" id="skills">
+                                                <label class="control-label">Role in school</label>
+                                                <select class="form-control" name="qualification_skill">
+                                   <option></option>
+<option value="Director">Director</option>
+<option value="Askari">Askari</option>
+<option value="Bursar">Bursar</option>
+<option value="Cook">Cook</option>
+<option value="Matron">Matron</option>
+<option value="Nurse">Nurse</option>
+<option value="Secretary">Secretary</option>
+<option value="Warden">Warden</option>
+<option value="Other">Other</option>
+                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label">Date joined</label>
+                                                <input type="date" class="form-control" name="date_joined" value="">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label">Photo</label>
+                                                <br>
+                                                <input type="file" name="photo">
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <footer class="footer" style="left: 0px!important; background-color: #0f7747;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <span class="text-white">2022 - 2023.  A product of MPABAISI TECHNOLOGIES</span>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-md-right footer-links d-none d-sm-block">
+                                <a class="text-white" href="javascript:void(0);">Help: +256 787 444 081 / +256 755 205 108</a>
+                                <!-- <a href="javascript:void(0);">Help</a> -->
+                                <!-- <a href="javascript:void(0);">Contact Us</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </footer>
+    </div>
+    </div>
+
+
+    <div class="rightbar-overlay"></div>
+
+    <script src="https://demo.lesson.co.ug/assets/js/vendor.min.js"></script>
+    <script src="https://demo.lesson.co.ug/assets/js/app.min.js"></script>
+    <script src="https://demo.lesson.co.ug/js/choosen.js"></script>
+
+    <script>
+        $("#user_id,#role_id").chosen();
+    </script>
+
+
+
+    <script type="text/javascript">
+        $("#save_school").click(function() {
+            $("#save_school").text("Processing ...");
+        });
+    </script>
+
+    <script type="text/javascript">
+        var isSubmitting = false
+
+        $(document).ready(function() {
+            $('#form').submit(function() {
+                isSubmitting = true
+            })
+
+            $('#form').data('initial-state', $('#form').serialize());
+
+            $(window).on('beforeunload', function() {
+                if (!isSubmitting && $('#form').serialize() != $('#form').data('initial-state')) {
+                    return 'You have unsaved changes which will not be saved.'
+                }
+            });
+        })
+    </script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#skills").hide();
+
+            $('#staff_department').on('change', function(e) {
+                if ($("#staff_department").val() == "Non teaching staff") {
+                    $("#lessons_per_week").hide();
+                    $("#teaching_expirience").hide();
+                    $("#skills").show();
+                } else {
+                    $("#lessons_per_week").show();
+                    $("#teaching_expirience").show();
+                    $("#skills").hide();
+                }
+
+            })
+        })
+    </script>
+
+</body>
+
+</html>
